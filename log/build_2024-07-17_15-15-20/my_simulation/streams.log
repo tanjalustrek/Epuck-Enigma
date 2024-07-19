@@ -1,0 +1,25 @@
+[0.494s] Invoking command in '/home/romi-lab-2/project_ws/src/my_simulation': PYTHONPATH=/home/romi-lab-2/project_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_simulation build --build-base /home/romi-lab-2/project_ws/build/my_simulation/build install --record /home/romi-lab-2/project_ws/build/my_simulation/install.log --install-scripts $base/lib/my_simulation --single-version-externally-managed install_data
+[0.665s] running egg_info
+[0.665s] writing ../../build/my_simulation/my_simulation.egg-info/PKG-INFO
+[0.665s] writing dependency_links to ../../build/my_simulation/my_simulation.egg-info/dependency_links.txt
+[0.666s] writing entry points to ../../build/my_simulation/my_simulation.egg-info/entry_points.txt
+[0.666s] writing requirements to ../../build/my_simulation/my_simulation.egg-info/requires.txt
+[0.666s] writing top-level names to ../../build/my_simulation/my_simulation.egg-info/top_level.txt
+[0.692s] reading manifest file '../../build/my_simulation/my_simulation.egg-info/SOURCES.txt'
+[0.692s] writing manifest file '../../build/my_simulation/my_simulation.egg-info/SOURCES.txt'
+[0.692s] running build
+[0.692s] running build_py
+[0.693s] copying my_simulation/models/cylinder/model.sdf -> /home/romi-lab-2/project_ws/build/my_simulation/build/lib/my_simulation/models/cylinder
+[0.693s] running install
+[0.693s] running install_lib
+[0.694s] copying /home/romi-lab-2/project_ws/build/my_simulation/build/lib/my_simulation/models/cylinder/model.sdf -> /home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation/models/cylinder
+[0.694s] running install_data
+[0.695s] copying my_simulation/launch/project.launch.py -> /home/romi-lab-2/project_ws/install/my_simulation/share/my_simulation/launch
+[0.695s] copying my_simulation/models/cylinder/model.sdf -> /home/romi-lab-2/project_ws/install/my_simulation/share/my_simulation/models
+[0.695s] running install_egg_info
+[0.696s] removing '/home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation-0.0.0-py3.8.egg-info' (and everything under it)
+[0.696s] Copying ../../build/my_simulation/my_simulation.egg-info to /home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation-0.0.0-py3.8.egg-info
+[0.697s] running install_scripts
+[0.709s] Installing my_node script to /home/romi-lab-2/project_ws/install/my_simulation/lib/my_simulation
+[0.710s] writing list of installed files to '/home/romi-lab-2/project_ws/build/my_simulation/install.log'
+[0.723s] Invoked command in '/home/romi-lab-2/project_ws/src/my_simulation' returned '0': PYTHONPATH=/home/romi-lab-2/project_ws/build/my_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_simulation build --build-base /home/romi-lab-2/project_ws/build/my_simulation/build install --record /home/romi-lab-2/project_ws/build/my_simulation/install.log --install-scripts $base/lib/my_simulation --single-version-externally-managed install_data

@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/my_simulation/my_simulation.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_simulation/my_simulation.egg-info/dependency_links.txt
+writing entry points to ../../build/my_simulation/my_simulation.egg-info/entry_points.txt
+writing requirements to ../../build/my_simulation/my_simulation.egg-info/requires.txt
+writing top-level names to ../../build/my_simulation/my_simulation.egg-info/top_level.txt
+reading manifest file '../../build/my_simulation/my_simulation.egg-info/SOURCES.txt'
+writing manifest file '../../build/my_simulation/my_simulation.egg-info/SOURCES.txt'
+running build
+running build_py
+copying my_simulation/generator/cuboid_gen.py -> /home/romi-lab-2/project_ws/build/my_simulation/build/lib/my_simulation/generator
+running install
+running install_lib
+copying /home/romi-lab-2/project_ws/build/my_simulation/build/lib/my_simulation/generator/cuboid_gen.py -> /home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation/generator
+byte-compiling /home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation/generator/cuboid_gen.py to cuboid_gen.cpython-38.pyc
+/home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation/generator/cuboid_gen.py:65: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+  size_values = [float(value) for value in size_element.text.split()][0, 1]
+running install_data
+copying my_simulation/generator/cuboid_gen.py -> /home/romi-lab-2/project_ws/install/my_simulation/share/my_simulation/generator
+running install_egg_info
+removing '/home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/my_simulation/my_simulation.egg-info to /home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation-0.0.0-py3.8.egg-info
+running install_scripts
+Installing my_node script to /home/romi-lab-2/project_ws/install/my_simulation/lib/my_simulation
+writing list of installed files to '/home/romi-lab-2/project_ws/build/my_simulation/install.log'
