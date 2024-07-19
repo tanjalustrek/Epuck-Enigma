@@ -1,2 +1,0 @@
-/home/romi-lab-2/project_ws/install/my_simulation/lib/python3.8/site-packages/my_simulation/generator/cuboid_gen.py:65: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
-  size_values = [float(value) for value in size_element.text.split()][0, 1]
