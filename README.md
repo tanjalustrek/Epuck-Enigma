@@ -2,7 +2,7 @@
 
 In this simulation a random number of random sized and oriented objects are spawned inside a room.
 
-The simulation was built with **Gazebo 11.14.0** and **ROS 2 foxy** on **Ubuntu 20.04**.
+The simulation was built with **Gazebo 11.14.0** and **ROS 2 foxy** on **Ubuntu 20.04**.  
 **Warning**: in the code I use absolute paths so you will have to make some modifications.
 
 Instructions to run on Ubuntu 20.04:
