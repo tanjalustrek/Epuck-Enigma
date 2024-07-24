@@ -1,6 +1,7 @@
 import os
 import random
 import xml.etree.ElementTree as ET
+from ament_index_python.packages import get_package_share_directory
 
 # Generates random .sdf files for triangular prisms
 def generate_triangular_prism(num_files=1):
@@ -54,7 +55,7 @@ def generate_triangular_prism(num_files=1):
         ET.SubElement(script, 'uri').text = 'file://media/materials/scripts/gazebo.material'
 
         # Save the .sdf file
-        output_dir = '/home/romi-lab-2/project_ws/src/my_simulation/my_simulation/models/triangular_prism'
+        output_dir = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'triangular_prism')
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, f'model_{i+1}.sdf')
         tree = ET.ElementTree(root)
@@ -68,13 +69,9 @@ def get_side_length_scale(sdf_file_path):
     
     # Find the scale element within the mesh element
     scale_element = root.find(".//mesh/scale")
-    if scale_element is None:
-        raise ValueError("The SDF file does not contain a valid triangular prism definition.")
     
     # Extract the side length from the scale attribute
     scale_values = scale_element.text.split()
-    if len(scale_values) < 3:
-        raise ValueError("The scale attribute does not contain enough values.")
-    
     side_scale = float(scale_values[0])
+    
     return side_scale

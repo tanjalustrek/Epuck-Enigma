@@ -22,7 +22,7 @@ setup(
     zip_safe=True,
     maintainer='romi-lab-2',
     maintainer_email='tanjalustrek@gmail.com',
-    description='Spawn random objects',
+    description='Spawns random simple objects',
     license='Apache License 2.0',
     tests_require=['pytest'],
     entry_points={

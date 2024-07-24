@@ -43,9 +43,9 @@ def generate_launch_description():
     # Spawn the objects at random positions
     for i in range(num_objects):
         # Set paths
-        cuboid_path = f'/home/romi-lab-2/project_ws/src/my_simulation/my_simulation/models/cuboid/model_{i+1}.sdf'
-        cylinder_path = f'/home/romi-lab-2/project_ws/src/my_simulation/my_simulation/models/cylinder/model_{i+1}.sdf'
-        triangular_prism_path = f'/home/romi-lab-2/project_ws/src/my_simulation/my_simulation/models/triangular_prism/model_{i+1}.sdf'
+        cuboid_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cuboid', f'model_{i+1}.sdf')
+        cylinder_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cylinder', f'model_{i+1}.sdf')
+        triangular_prism_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'triangular_prism', f'model_{i+1}.sdf')
 
         # Choose the object
         my_object = random.choice(my_objects)

@@ -1,6 +1,7 @@
 import os
 import random
 import xml.etree.ElementTree as ET
+from ament_index_python.packages import get_package_share_directory
 
 # Generates random .sdf files for cuboids
 def generate_cuboid(num_files=1):
@@ -52,7 +53,7 @@ def generate_cuboid(num_files=1):
         ET.SubElement(script, 'uri').text = 'file://media/materials/scripts/gazebo.material'
 
         # Save the .sdf file
-        output_dir = '/home/romi-lab-2/project_ws/src/my_simulation/my_simulation/models/cuboid'
+        output_dir = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cuboid')
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, f'model_{i+1}.sdf')
         tree = ET.ElementTree(root)
