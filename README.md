@@ -9,7 +9,7 @@ Instructions to run on Ubuntu 20.04:
 1. Make sure you have installed the right versions of Gazebo and ROS 2.
 2. Open ***project_ws*** in the terminal.
 3. Run:
-    ```
+    - ```
     colcon build
     ```
     ```
