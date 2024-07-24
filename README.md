@@ -11,7 +11,6 @@ Instructions to run on Ubuntu 20.04:
 3. Run:
     ```
     colcon build`
-     ```
     ```
     source install/setup.bash`
     ```
