@@ -2,11 +2,10 @@
 
 In this simulation a random number of random sized and oriented objects are spawned inside a room.
 
-The simulation was built with **Gazebo 11.14.0** and **ROS 2 foxy** on **Ubuntu 20.04**.  
-**Warning**: in the code I use absolute paths so you will have to make some modifications.
+The simulation was built with **Gazebo 11.14.0** and **ROS 2 foxy** on **Ubuntu 20.04**.
 
 Instructions to run on Ubuntu 20.04:
-1. Make sure you have installed the right versions of Gazebo and ROS 2 and corrected the absolute paths.
+1. Make sure you have installed the right versions of Gazebo and ROS 2.
 2. Open ***project_ws*** in the terminal.
 3. Run:
     - `colcon build`
