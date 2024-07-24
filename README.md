@@ -1,4 +1,4 @@
-# Spawn random objects in Gazebo
+# Spawn random simple objects in Gazebo
 
 In this simulation a random number of random sized and oriented objects are spawned inside a room.
 
