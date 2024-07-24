@@ -11,7 +11,13 @@ Instructions to run on Ubuntu 20.04:
     ```
     - `colcon build`
      ```
+    ```
     - `source install/setup.bash`
-    - `export GAZEBO_MODEL_PATH=/.../project_ws/src/my_simulation/my_simulation/models:$GAZEBO_MODEL_PATH` where you replace ... with the location of ***project_ws*** on your computer.
+    ```
+    ```
+    - `export GAZEBO_MODEL_PATH=/.../project_ws/src/my_simulation/my_simulation/models:$GAZEBO_MODEL_PATH
+    ``` where you replace ... with the location of ***project_ws*** on your computer.
+    ```
     - `ros2 launch my_simulation project.launch.py`
+    - ```
 4. Gazebo should start and objects should appear inside the room.
