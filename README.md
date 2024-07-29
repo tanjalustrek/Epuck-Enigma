@@ -29,7 +29,7 @@ Instructions to run on Ubuntu 20.04:
      source install/setup.bash
      ```
    - ```
-     ros2 run my_simulation YOUR_PYTHON_FILE
+     ros2 run my_simulation CHOSEN_PYTHON_FILE
      ```
   Now you should be able to move the epuck with the appropriate keys.
 
