@@ -31,5 +31,5 @@ Instructions to run on Ubuntu 20.04:
    - ```
      ros2 run my_simulation CHOSEN_PYTHON_FILE
      ```
-  Now you should be able to move the epuck with the appropriate keys.
+   Now you should be able to move the epuck with the appropriate keys.
 
