@@ -3,26 +3,29 @@ import random
 import xml.etree.ElementTree as ET
 from ament_index_python.packages import get_package_share_directory
 
-# Generates random .sdf files for cylinders
-def generate_cylinder(num_files=1):
-    # Define the radius range
-    radius_range = (0.05, 0.2)
-    length = 0.5
+### Generates random .sdf files for triangular prisms
+def generate_triangular_prism(num_files=1):
+    # Define the height scale, side length scale range for the equilateral triangle and orientation range around z axis
+    height = 0.125
+    side_length_range = (0.03, 0.13)
+    orientation_range = (-3.14, 3.14)
 
     for i in range(num_files):
-        # Generate random radius value
-        radius = random.uniform(radius_range[0], radius_range[1])
+        # Generate random side length value and orientation
+        side_length = random.uniform(side_length_range[0], side_length_range[1])
+        orientation_z = random.uniform(orientation_range[0], orientation_range[1])
+        orientation = [0, 0, orientation_z]
 
         # Create the .sdf file
         root = ET.Element('sdf', version='1.6')
         model = ET.SubElement(root, 'model', name='model')
         link = ET.SubElement(model, 'link', name='link')
-        ET.SubElement(link, 'pose').text = '0 0 0 0 0 0'
+        ET.SubElement(link, 'pose').text = ' '.join(map(str, [0, 0, 0] + orientation))
 
         # Add gravity
         ET.SubElement(link, 'gravity').text = 'true'
 
-        # Make the cylinder static
+        # Make the prism static
         ET.SubElement(link, 'static').text = 'true'
 
         inertial = ET.SubElement(link, 'inertial')
@@ -37,31 +40,38 @@ def generate_cylinder(num_files=1):
 
         collision = ET.SubElement(link, 'collision', name='collision')
         geometry = ET.SubElement(collision, 'geometry')
-        cylinder = ET.SubElement(geometry, 'cylinder')
-        ET.SubElement(cylinder, 'radius').text = str(radius)
-        ET.SubElement(cylinder, 'length').text = str(length)
+        mesh = ET.SubElement(geometry, 'mesh')
+        ET.SubElement(mesh, 'uri').text = 'model://triangular_prism/meshes/triangular_prism.stl'
+        ET.SubElement(mesh, 'scale').text = f'{side_length} {side_length} {height}'
 
         visual = ET.SubElement(link, 'visual', name='visual')
         geometry = ET.SubElement(visual, 'geometry')
-        cylinder = ET.SubElement(geometry, 'cylinder')
-        ET.SubElement(cylinder, 'radius').text = str(radius)
-        ET.SubElement(cylinder, 'length').text = str(length)
+        mesh = ET.SubElement(geometry, 'mesh')
+        ET.SubElement(mesh, 'uri').text = 'model://triangular_prism/meshes/triangular_prism.stl'
+        ET.SubElement(mesh, 'scale').text = f'{side_length} {side_length} {height}'
         material = ET.SubElement(visual, 'material')
         script = ET.SubElement(material, 'script')
-        ET.SubElement(script, 'name').text = 'Gazebo/Green'
+        ET.SubElement(script, 'name').text = 'Gazebo/Red'
         ET.SubElement(script, 'uri').text = 'file://media/materials/scripts/gazebo.material'
 
         # Save the .sdf file
-        output_dir = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cylinder')
+        output_dir = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'triangular_prism')
         os.makedirs(output_dir, exist_ok=True)
         output_file = os.path.join(output_dir, f'model_{i+1}.sdf')
         tree = ET.ElementTree(root)
         tree.write(output_file)
         print(f'SDF file saved as {output_file}')
 
-# Gets the radius
-def get_radius(sdf_file_path):
+### Gets the side length of the triangular prism
+def get_side_length_scale(sdf_file_path):
     tree = ET.parse(sdf_file_path)
     root = tree.getroot()
-    radius = float(root.find(".//cylinder/radius").text)
-    return radius
+    
+    # Find the scale element within the mesh element
+    scale_element = root.find(".//mesh/scale")
+    
+    # Extract the side length from the scale attribute
+    scale_values = scale_element.text.split()
+    side_scale = float(scale_values[0])
+    
+    return side_scale

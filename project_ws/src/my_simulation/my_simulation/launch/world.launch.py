@@ -8,8 +8,8 @@ import random
 import math
 
 # Get the directory containing cuboid_gen.py and cylinder_gen.py
-generator_dir = os.path.join(get_package_share_directory('my_simulation'), 'generator')
-sys.path.append(generator_dir)
+scripts_dir = os.path.join(get_package_share_directory('my_simulation'), 'scripts')
+sys.path.append(scripts_dir)
 
 from cuboid_gen import generate_cuboid
 from cuboid_gen import get_edges
@@ -18,6 +18,7 @@ from cylinder_gen import get_radius
 from triangular_prism_gen import generate_triangular_prism
 from triangular_prism_gen import get_side_length_scale
 
+### Launches random objects inside a room in the room.world world
 def generate_launch_description():
     world_file = os.path.join(get_package_share_directory('my_simulation'), 'worlds', 'room.world')
     my_objects = ['cuboid', 'cylinder', 'triangular_prism']
@@ -67,7 +68,7 @@ def generate_launch_description():
         min_x, max_x = -0.75 + max_size, 0.65 - max_size
         min_y, max_y = -1.34 + max_size, 1.44 - max_size
 
-        # Check if the new position is at least min_distance away from all other spawned positions
+        # Check if the random position is at least min_distance away from all other spawned positions
         # If not, try again with a new random position
         is_valid_position = False
         retry_count = -1
@@ -145,7 +146,7 @@ def generate_launch_description():
 
     # Execute
     return LaunchDescription([
-        SetEnvironmentVariable('PYTHONPATH', generator_dir + ':' + os.environ.get('PYTHONPATH', '')),
+        SetEnvironmentVariable('PYTHONPATH', scripts_dir + ':' + os.environ.get('PYTHONPATH', '')),
         ExecuteProcess(
             cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so', world_file],
             output='screen'
