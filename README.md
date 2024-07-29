@@ -19,11 +19,11 @@ Instructions to run on Ubuntu 20.04:
       export GAZEBO_MODEL_PATH=/.../project_ws/src/my_simulation/my_simulation/models:$GAZEBO_MODEL_PATH
       ```
       where you replace ... with the location of ***project_ws*** on your computer.
-    - Depending on what simulation you want to run, choose the appropriate launch file. If you just want to spawn the random objects choose ```world.launch.py```, otherwise use ```epuck_world.launch.py```.
+    - Depending on what simulation you want to run, choose the appropriate launch file. If you just want to spawn the random objects or just the epuck choose ```world.launch.py``` or ```epuck.launch.py``` respectively, otherwise use ```epuck_world.launch.py```.
       ```
       ros2 launch my_simulation CHOSEN_LAUNCH_FILE
       ```
-4. Gazebo should start and objects (and an epuck) should appear inside the room.
+4. Gazebo should start.
 5. If you want to move your epuck open ***project_ws*** in a new terminal while the simulation is running. Then choose either ```epuck_teleop_key.py``` or ```epuck_teleop_key_down.py``` and run the following lines.
    - ```
      source install/setup.bash
