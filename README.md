@@ -24,7 +24,7 @@ Instructions to run on Ubuntu 20.04:
       ```
       ros2 launch my_simulation CHOSEN_LAUNCH_FILE
       ```
-5. Gazebo should start.
+5. The simulation should start.
 6. If you want to move your epuck open ***project_ws*** in a new terminal while the simulation is running. Then choose either ```epuck_teleop_key.py``` or ```epuck_teleop_key_down.py``` and run the following lines.
    - ```
      source install/setup.bash
@@ -32,5 +32,5 @@ Instructions to run on Ubuntu 20.04:
    - ```
      ros2 run my_simulation CHOSEN_PYTHON_FILE
      ```
-   Now you should be able to move the epuck with the appropriate keys.
+   Now you should be able to move the epuck.
 
