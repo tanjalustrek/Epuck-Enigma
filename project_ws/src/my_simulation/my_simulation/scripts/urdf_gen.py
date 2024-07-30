@@ -7,7 +7,7 @@ def generate_urdf():
     package_dir = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation')
 
     # Construct the path to the meshes
-    mesh_dir = os.path.join(package_dir, 'models', 'urdf', 'meshes')
+    mesh_dir = os.path.join(package_dir, 'meshes')
 
     # Parse the existing URDF file
     urdf_path = os.path.join(package_dir, 'models', 'urdf', 'bocbot.urdf')

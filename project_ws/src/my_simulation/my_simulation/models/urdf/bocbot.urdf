@@ -120,13 +120,13 @@
     <collision name="collision">
       <origin rpy=" 0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/models/urdf/meshes/main_body.STL" />
+        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/meshes/main_body.STL" />
       </geometry>
     </collision>
     <visual name="chassis_visual">
       <origin rpy=" 0 0 0" xyz="0 0 0" />
       <geometry>
-        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/models/urdf/meshes/main_body.STL" />
+        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/meshes/main_body.STL" />
       </geometry>
     </visual>
   </link>
@@ -139,13 +139,13 @@
     <visual>
       <origin rpy=" 0 0 0" xyz="0.0 0 0" />
       <geometry>
-        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/models/urdf/meshes/left_wheel.STL" />
+        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/meshes/left_wheel.STL" />
       </geometry>
     </visual>
     <collision>
       <origin rpy=" 0 0 0" xyz="0.0 0 0" />
       <geometry>
-        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/models/urdf/meshes/left_wheel.STL" />
+        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/meshes/left_wheel.STL" />
       </geometry>
     </collision>
   </link>
@@ -158,13 +158,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0.0 0 0" />
       <geometry>
-        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/models/urdf/meshes/right_wheel.STL" />
+        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/meshes/right_wheel.STL" />
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 0 0" />
       <geometry>
-        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/models/urdf/meshes/right_wheel.STL" />
+        <mesh filename="/home/romi/project_ws/src/my_simulation/my_simulation/meshes/right_wheel.STL" />
       </geometry>
     </collision>
   </link>

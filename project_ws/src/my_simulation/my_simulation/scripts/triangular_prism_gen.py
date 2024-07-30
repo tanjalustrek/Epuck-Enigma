@@ -1,7 +1,6 @@
 import os
 import random
 import xml.etree.ElementTree as ET
-from ament_index_python.packages import get_package_share_directory
 
 ### Generates random .sdf files for triangular prisms
 def generate_triangular_prism(num_files=1):
@@ -9,6 +8,7 @@ def generate_triangular_prism(num_files=1):
     height = 0.125
     side_length_range = (0.03, 0.13)
     orientation_range = (-3.14, 3.14)
+    mesh_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'meshes', 'triangular_prism.stl')
 
     for i in range(num_files):
         # Generate random side length value and orientation
@@ -41,13 +41,13 @@ def generate_triangular_prism(num_files=1):
         collision = ET.SubElement(link, 'collision', name='collision')
         geometry = ET.SubElement(collision, 'geometry')
         mesh = ET.SubElement(geometry, 'mesh')
-        ET.SubElement(mesh, 'uri').text = 'model://triangular_prism/meshes/triangular_prism.stl'
+        ET.SubElement(mesh, 'uri').text = mesh_path
         ET.SubElement(mesh, 'scale').text = f'{side_length} {side_length} {height}'
 
         visual = ET.SubElement(link, 'visual', name='visual')
         geometry = ET.SubElement(visual, 'geometry')
         mesh = ET.SubElement(geometry, 'mesh')
-        ET.SubElement(mesh, 'uri').text = 'model://triangular_prism/meshes/triangular_prism.stl'
+        ET.SubElement(mesh, 'uri').text = mesh_path
         ET.SubElement(mesh, 'scale').text = f'{side_length} {side_length} {height}'
         material = ET.SubElement(visual, 'material')
         script = ET.SubElement(material, 'script')
