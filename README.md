@@ -12,10 +12,12 @@ Structure:
  - launch files:  
   - ```objects.launch.py```: launches a random number of random static objects in ```room.world```,
   - ```epuck_objects.launch.py```: the same as previous but also launches an Epuck in the world,
-  - ```epuck_objects_bezier.launch.py```: the same as previous but also launches randomly shaped objects that can be pushed by the Epuck,
-  - bezier
-
-
+  - ```epuck_objects_bezier.launch.py```: the same as previous but also launches randomly shaped movable objects,
+  - ```epuck_bezier.launch.py```: launches an Epuck along with a randomly shaped movable object,
+  - ```epuck_maze.launch.py```: launches an Epuck in ```maze_gen.world```,
+  - ```epuck_maze_objects.launch.py```: launches an Epuck in ```maze.world``` along with some movable objects,
+  - ```epuck.launch.py```: launches an Epuck in ```room.world```.
+ - 
 
 Instructions to run on Ubuntu 20.04:
 1. Make sure you have installed the right versions of Gazebo and ROS 2.
