@@ -21,8 +21,7 @@ space key, k : force stop
 2 : switch to E-puck 2
 anything else : stop smoothly
 
-Press 1 to choose Epuck1
-or 2 for Epuck2
+Press 1 to choose Epuck1 or 2 for Epuck2
 
 CTRL-C to quit
 """

@@ -27,8 +27,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'epuck_teleop_key = my_simulation.epuck_teleop_key:main',
-            'epuck_teleop_key_two = my_simulation.epuck_teleop_key_two:main',
+            'epuck_teleop_key = my_simulation.scripts.epuck_teleop_key:main',
+            'epuck_teleop_key_two = my_simulation.scripts.epuck_teleop_key_two:main',
         ],
     },
 )
