@@ -1,6 +1,6 @@
 # Epuck Enigma
 
-This is a dynamic simulation environment built with **ROS 2 foxy** and **Gazebo 11.14.0** on **Ubuntu 20.04**. This project allows for the creation and spawning of random mazes and objects, providing a versatile platform for testing and development. It also enables adding epucks to interact with the created worlds.  
+This is a dynamic simulation environment built with **ROS 2 foxy** and **Gazebo 11.14.0** on **Ubuntu 20.04**. This project allows for the creation and spawning of random mazes and objects, providing a versatile platform for testing and development. It also enables adding Epucks to interact with the created worlds.  
 
 Structure:  
  - workspace: ***project_ws***,
