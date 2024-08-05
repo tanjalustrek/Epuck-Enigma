@@ -15,7 +15,6 @@ setup(
         (os.path.join('share', package_name, 'launch'), glob('my_simulation/launch/*.launch.py')),
         (os.path.join('share', package_name, 'models', 'urdf'), glob('my_simulation/models/urdf/*.urdf')),
         (os.path.join('share', package_name, 'scripts'), glob('my_simulation/scripts/*.py')),
-        ('lib/' + package_name, ['my_simulation/scripts/epuck_teleop_key_down.py']),
         ('lib/' + package_name, ['my_simulation/scripts/epuck_teleop_key.py']),
         ('lib/' + package_name, ['my_simulation/scripts/epuck_teleop_key_two.py']),
     ],
@@ -29,7 +28,6 @@ setup(
     entry_points={
         'console_scripts': [
             'epuck_teleop_key = my_simulation.epuck_teleop_key:main',
-            'epuck_teleop_key_down = my_simulation.epuck_teleop_key_down:main',
             'epuck_teleop_key_two = my_simulation.epuck_teleop_key_two:main',
         ],
     },

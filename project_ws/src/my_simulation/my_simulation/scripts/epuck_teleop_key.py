@@ -62,11 +62,6 @@ class TeleopEpuck(Node):
         self.x = 0.0
         self.th = 0.0
         self.status = 0
-        self.count = 0
-        self.target_speed = 0.0
-        self.target_turn = 0.0
-        self.control_speed = 0.0
-        self.control_turn = 0.0
         self.interactive_mode = sys.stdin.isatty()
 
     def run(self):
@@ -108,11 +103,9 @@ class TeleopEpuck(Node):
         if key in moveBindings.keys():
             self.x = moveBindings[key][0]
             self.th = moveBindings[key][1]
-            self.count = 0
         elif key in speedBindings.keys():
             self.speed = self.speed * speedBindings[key][0]
             self.turn = self.turn * speedBindings[key][1]
-            self.count = 0
             print(f"currently:\tspeed {self.speed:.2f}\tturn {self.turn:.2f} ")
             if (self.status == 14):
                 print(msg)
@@ -120,38 +113,17 @@ class TeleopEpuck(Node):
         elif key == ' ' or key == 'k' :
             self.x = 0.0
             self.th = 0.0
-            self.control_speed = 0.0
-            self.control_turn = 0.0
+        elif key == '\x03':
+            return True
         else:
-            self.count = self.count + 1
-            if self.count > 4:
-                self.x = 0.0
-                self.th = 0.0
-            if (key == '\x03'):
-                return True
+            self.x = 0.0
+            self.th = 0.0
         return False
 
     def _publish_twist(self):
-        self.target_speed = self.speed * self.x
-        self.target_turn = self.turn * self.th
-
-        if self.target_speed > self.control_speed:
-            self.control_speed = min( self.target_speed, self.control_speed + 0.02 )
-        elif self.target_speed < self.control_speed:
-            self.control_speed = max( self.target_speed, self.control_speed - 0.02 )
-        else:
-            self.control_speed = self.target_speed
-
-        if self.target_turn > self.control_turn:
-            self.control_turn = min( self.target_turn, self.control_turn + 0.1 )
-        elif self.target_turn < self.control_turn:
-            self.control_turn = max( self.target_turn, self.control_turn - 0.1 )
-        else:
-            self.control_turn = self.target_turn
-
         twist = Twist()
-        twist.linear.x = self.control_speed
-        twist.angular.z = self.control_turn
+        twist.linear.x = self.speed * self.x
+        twist.angular.z = self.turn * self.th
         self.publisher_.publish(twist)
 
     def _publish_stop_twist(self):
