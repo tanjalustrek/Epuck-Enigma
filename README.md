@@ -16,12 +16,12 @@ Structure:
     - ```epuck_bezier.launch.py```: launches an Epuck along with a randomly shaped movable object,
     - ```epuck_maze.launch.py```: launches an Epuck in ```maze_gen.world```,
     - ```epuck_maze_objects.launch.py```: launches an Epuck in ```maze.world``` along with some movable objects,
-    - ```epuck.launch.py```: launches an Epuck in ```room.world```.
+    - ```epuck.launch.py```: launches an Epuck in ```room.world```,
  - scripts folder: different scripts used by the launch files and
-    - ```epuck_teleop_key.py```: used to move the Epuck when you have only one Epuck
-    - ```epuck_teleop_key_two.py```: used to move an Epuck when you have two Epucks
-- models forlder: ```.sdf``` and ```.urdf``` files for the objects and the Epuck
-- meshes folder: meshes used for the objects and the Epuck
+    - ```epuck_teleop_key.py```: used to move the Epuck when you have only one Epuck,
+    - ```epuck_teleop_key_two.py```: used to move an Epuck when you have two Epucks,
+- models forlder: ```.sdf``` and ```.urdf``` files for the objects and the Epuck,
+- meshes folder: meshes used to create the objects and the Epuck.
 
 Instructions to run on Ubuntu 20.04:
 1. Make sure you have installed the right versions of Gazebo and ROS 2.
