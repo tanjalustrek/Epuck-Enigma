@@ -20,6 +20,8 @@ Structure:
  - scripts folder: different scripts used by the launch files and
   - ```epuck_teleop_key.py```: used to move the Epuck when you have only one Epuck
   - ```epuck_teleop_key_two.py```: used to move an Epuck when you have two Epucks
+- models forlder: ```.sdf``` and ```.urdf``` files for the objects and the Epuck
+- meshes folder: meshes used for the objects and the Epuck
 
 Instructions to run on Ubuntu 20.04:
 1. Make sure you have installed the right versions of Gazebo and ROS 2.
@@ -36,17 +38,16 @@ Instructions to run on Ubuntu 20.04:
       export GAZEBO_MODEL_PATH=/.../project_ws/src/my_simulation/my_simulation/models:$GAZEBO_MODEL_PATH
       ```
       where you replace ... with the location of ***project_ws*** on your computer.
-    - Depending on what simulation you want to run, choose the appropriate launch file. If you just want to spawn the random objects or just the epuck choose ```world.launch.py``` or ```epuck.launch.py``` respectively, otherwise use ```epuck_world.launch.py```.
+    - Depending on what simulation you want to run, choose the appropriate launch file. 
       ```
       ros2 launch my_simulation CHOSEN_LAUNCH_FILE
       ```
 5. The simulation should start.
-6. If you want to move your epuck open ***project_ws*** in a new terminal while the simulation is running. Then choose either ```epuck_teleop_key.py``` or ```epuck_teleop_key_down.py``` and run the following lines.
+6. If you want to move your epuck open ***project_ws*** in a new terminal while the simulation is running. Then choose either ```epuck_teleop_key.py``` or ```epuck_teleop_key_two.py``` and run the following lines.
    - ```
      source install/setup.bash
      ```
    - ```
      ros2 run my_simulation CHOSEN_PYTHON_FILE
      ```
-   Now you should be able to move the epuck.
-
+   Now you should be able to move the epuck and interact with the world.
