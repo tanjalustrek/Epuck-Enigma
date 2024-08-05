@@ -1,9 +1,21 @@
-# Spawn random simple objects in Gazebo
+# Epuck Enigma
 
-In this simulation a random number of random sized and oriented objects are spawned inside a room. Additionally you can spawn an epuck inside the created world.
+This is a dynamic simulation environment built with **ROS 2 foxy** and **Gazebo 11.14.0** on **Ubuntu 20.04**. This project allows for the creation and spawning of random mazes and objects, providing a versatile platform for testing and development. It also enables adding epucks to interact with the created worlds.  
 
-The simulation was built with **Gazebo 11.14.0** and **ROS 2 foxy** on **Ubuntu 20.04**.  
-Workspace: ***project_ws***, package: ***my_simulation***.
+Structure:  
+ - workspace: ***project_ws***,
+ - package: ***my_simulation***,
+ - worlds:  
+  - ```room.world```: world with a simple rectangular room,
+  - ```maze.world```: world with a fixed maze,
+  - ```maze_gen.world```: world with a random maze,
+ - launch files:  
+  - ```objects.launch.py```: launches a random number of random static objects in ```room.world```,
+  - ```epuck_objects.launch.py```: the same as previous but also launches an Epuck in the world,
+  - ```epuck_objects_bezier.launch.py```: the same as previous but also launches randomly shaped objects that can be pushed by the Epuck,
+  - bezier
+
+
 
 Instructions to run on Ubuntu 20.04:
 1. Make sure you have installed the right versions of Gazebo and ROS 2.
