@@ -4,24 +4,25 @@ from launch import LaunchDescription
 from launch.actions import ExecuteProcess
 import sys
 
-# Get the directory scripts
+# Get the scripts directory
 scripts_dir = os.path.join(get_package_share_directory('my_simulation'), 'scripts')
 sys.path.append(scripts_dir)
 
 from urdf_gen import generate_urdf
 
-### Launches the epuck into the world room.world (world with only four walls)
-def generate_launch_description():    
+def generate_launch_description():
+    '''Launches an epuck into a world with only four walls'''
+    # Get the world path
     world = os.path.join(get_package_share_directory('my_simulation'), 'worlds', 'room.world')
 
-    # Generate bocbot.urdf file with personalized paths
+    # Generate bocbot_gen.urdf file with personalized paths and prepare it for use
     generate_urdf()
-
     urdf = os.path.join(get_package_share_directory('my_simulation'), 'models', 'urdf', 'bocbot_gen.urdf')
     xml = open(urdf, 'r').read()
     xml = xml.replace('"', '\\"')
     spwan_args = '{name: \"bocbot\", xml: \"'  +  xml + '\" }'
     
+    # Execute
     return LaunchDescription([
         ExecuteProcess(
             cmd=['gazebo', '--verbose', world, '-s', 'libgazebo_ros_factory.so'],

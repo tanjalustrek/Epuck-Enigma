@@ -43,9 +43,6 @@ speedBindings={
 }
 
 def getKey(settings):
-    if sys.platform == 'win32':
-        import msvcrt
-        return msvcrt.getch().decode('utf-8')
     tty.setraw(sys.stdin.fileno())
     rlist, _, _ = select.select([sys.stdin], [], [], 0.1)
     if rlist:
