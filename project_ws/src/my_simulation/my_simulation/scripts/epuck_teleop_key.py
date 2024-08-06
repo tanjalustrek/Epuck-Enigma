@@ -4,6 +4,8 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import sys, select, termios, tty
 import threading
+print(sys.path)
+print(__file__)
 
 msg = """
 Control Your E-puck!

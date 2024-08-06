@@ -3,7 +3,8 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 import sys, select, termios, tty
-import threading
+print(sys.path)
+print(__file__)
 
 msg = """
 Control Your E-pucks!
@@ -93,6 +94,7 @@ class TeleopEpuck(Node):
     def publish_stop_twist(self):
         twist = Twist()
         self.publisher_.publish(twist)
+
 def main(args=None):
     rclpy.init(args=args)
     epuck1 = TeleopEpuck("epuck1")

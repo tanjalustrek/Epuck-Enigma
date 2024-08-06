@@ -10,13 +10,18 @@ scripts_dir = os.path.join(get_package_share_directory('my_simulation'), 'script
 sys.path.append(scripts_dir)
 
 from urdf_gen import generate_urdf
+from fixed_triangular_prism_gen import generate_fixed_triangular_prism
 
 def generate_launch_description():
     '''Launches an epuck into a maze'''
+    # Generate the .sdf file for the triangular_prism
+    generate_fixed_triangular_prism()
+
     # Get the world and cube path
     world_path = os.path.join(get_package_share_directory('my_simulation'), 'worlds', 'maze.world')
     cube_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cuboid', 'cube.sdf')
     cylinder_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cylinder', 'cylinder.sdf')
+    triangular_prism_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'triangular_prism', 'triangular_prism.sdf')
 
     # Generate bocbot_gen.urdf file with personalized paths and prepare it for use
     generate_urdf()
@@ -64,6 +69,25 @@ def generate_launch_description():
             ]
         ),
         )
+
+    coordinates_triangular_prism = [[0.5, -0.2], [-0.5, 0.7], [-0.1, 0.5]]
+    triangular_prisms = []
+    for i in range(len(coordinates_triangular_prism)):
+        triangular_prisms.append(
+            Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            name='cylinder',
+            output='screen',
+            arguments=[
+                '-entity', f'triangular_prism_{i+1}',
+                '-file', triangular_prism_path,
+                '-x', str(coordinates_triangular_prism[i][0]),
+                '-y', str(coordinates_triangular_prism[i][1]),
+                '-z', '0.025'
+            ]
+        ),
+        )
     
     return LaunchDescription([
         ExecuteProcess(
@@ -77,4 +101,5 @@ def generate_launch_description():
             output='screen'),
             *cubes,
             *cylinders,
+            *triangular_prisms,
     ])
