@@ -17,7 +17,7 @@ setup(
         (os.path.join('share', package_name, 'scripts'), glob('my_simulation/scripts/*.py')),
         ('lib/' + package_name, ['my_simulation/scripts/epuck_teleop_key.py']),
         ('lib/' + package_name, ['my_simulation/scripts/epuck_teleop_key_two.py']),
-        ('lib/' + package_name, ['my_simulation/scripts/robot_controller.py']),
+        ('lib/' + package_name, ['my_simulation/scripts/epuck_controller.py']),
         ('lib/' + package_name, ['my_simulation/scripts/epuck_maze_controller.py']),
     ],
     install_requires=['setuptools'],
@@ -31,7 +31,7 @@ setup(
         'console_scripts': [
             'epuck_teleop_key = my_simulation.scripts.epuck_teleop_key:main',
             'epuck_teleop_key_two = my_simulation.scripts.epuck_teleop_key_two:main',
-            'robot_controller = my_simulation.scripts.robot_controller:main',
+            'epuck_controller = my_simulation.scripts.epuck_controller:main',
             'epuck_maze_controller = my_simulation.scripts.epuck_maze_controller:main',
         ],
     },
