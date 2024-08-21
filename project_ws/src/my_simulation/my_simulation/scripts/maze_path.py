@@ -7,7 +7,7 @@ import os
 # This script contains functions that find the shortes path from start to goal in a given maze
 def parse_sdf_wall_positions():
     '''Gets wall positions and properties from a .sdf file'''
-    sdf_file = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'worlds', 'maze.world')
+    sdf_file = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'worlds', 'maze_gen.world')
     tree = ET.parse(sdf_file)
     root = tree.getroot()
 

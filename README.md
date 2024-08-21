@@ -18,8 +18,10 @@ Structure:
     - ```epuck_maze_objects.launch.py```: launches an Epuck in ```maze.world``` along with some movable objects,
     - ```epuck.launch.py```: launches an Epuck in ```room.world```,
  - scripts folder: different scripts used by the launch files and
-    - ```epuck_teleop_key.py```: used to move the Epuck when you have only one Epuck,
+    - ```epuck_teleop_key.py```: used to move an Epuck when you have only one Epuck,
     - ```epuck_teleop_key_two.py```: used to move an Epuck when you have two Epucks,
+    - ```epuck_controller.py```: used to move an Epuck in ```room.world``` from a random location to a pre-set location,
+    - ```epuck_maze_controller.py```: used to navigate an Epuck trough a maze (```maze.world``` or ```maze_gen.world```) from the spawn location to a pre-set location,
 - models forlder: ```.sdf``` and ```.urdf``` files for the objects and the Epuck,
 - meshes folder: meshes used to create the objects and the Epuck.
 
