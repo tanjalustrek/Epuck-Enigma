@@ -20,8 +20,8 @@ Structure:
  - scripts folder: different scripts used by the launch files and
     - ```epuck_teleop_key.py```: used to move an Epuck when you have only one Epuck,
     - ```epuck_teleop_key_two.py```: used to move an Epuck when you have two Epucks,
-    - ```epuck_controller.py```: used to move an Epuck in ```room.world``` from a random location to a pre-set location,
-    - ```epuck_maze_controller.py```: used to navigate an Epuck trough a maze (```maze_gen.world```) from the spawn location to a pre-set location,
+    - ```epuck_controller.py```: used to move an Epuck in ```room.world``` from the spawn location to a pre-set location,
+    - ```epuck_maze_controller.py```: used to navigate an Epuck trough a maze in ```maze_gen.world``` from the spawn location to a pre-set location,
 - models forlder: ```.sdf``` and ```.urdf``` files for the objects and the Epuck,
 - meshes folder: meshes used to create the objects and the Epuck.
 
@@ -45,11 +45,11 @@ Instructions to run on Ubuntu 20.04:
       ros2 launch my_simulation CHOSEN_LAUNCH_FILE
       ```
 5. The simulation should start.
-6. If you want to move your epuck open ***project_ws*** in a new terminal while the simulation is running. Then choose either ```epuck_teleop_key.py``` or ```epuck_teleop_key_two.py``` and run the following lines.
+6. If you want to move your Epuck open ***project_ws*** in a new terminal while the simulation is running. Then choose one of the mentioned files in the scripts folder and run the following lines.
    - ```
      source install/setup.bash
      ```
    - ```
-     ros2 run my_simulation CHOSEN_PYTHON_FILE
+     ros2 run my_simulation CHOSEN_PYTHON_FILE (without .py)
      ```
-   Now you should be able to move the epuck and interact with the world.
+   Now you should be able to move the Epuck and interact with the world.
