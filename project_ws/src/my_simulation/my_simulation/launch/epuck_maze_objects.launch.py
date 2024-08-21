@@ -18,7 +18,7 @@ def generate_launch_description():
     generate_fixed_triangular_prism()
 
     # Get the world and cube path
-    world_path = os.path.join(get_package_share_directory('my_simulation'), 'worlds', 'maze.world')
+    world_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'worlds', 'maze.world')
     cube_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cuboid', 'cube.sdf')
     cylinder_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'cylinder', 'cylinder.sdf')
     triangular_prism_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'triangular_prism', 'triangular_prism.sdf')
@@ -28,11 +28,11 @@ def generate_launch_description():
     urdf = os.path.join(get_package_share_directory('my_simulation'), 'models', 'urdf', 'bocbot_gen.urdf')
     xml = open(urdf, 'r').read()
     xml = xml.replace('"', '\\"')
-    spwan_args_1 = f'{{name: \"epuck1\", xml: \"{xml}\", robot_namespace: \"epuck1\", initial_pose: {{position: {{x: 0.1, y: 1.25, z: 0}}}}}}'
+    spwan_args_1 = f'{{name: \"epuck1\", xml: \"{xml}\", robot_namespace: \"epuck1\", initial_pose: {{position: {{x: 0.3, y: 1.25, z: 0}}}}}}'
     spwan_args_2 = f'{{name: \"epuck2\", xml: \"{xml}\", robot_namespace: \"epuck2\", initial_pose: {{position: {{x: -0.6, y: 0.2, z: 0}}}}}}'
 
     # Add objects
-    coordinates_cube = [[0.1, 1.15], [-0.4, -0.1], [-0.2, -0.8]]
+    coordinates_cube = [[0.3, 1.15], [-0.4, -0.1], [-0.2, -0.8]]
     cubes = []
     for i in range(len(coordinates_cube)):
         cubes.append(

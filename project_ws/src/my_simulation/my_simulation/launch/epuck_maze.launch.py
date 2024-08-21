@@ -18,8 +18,8 @@ from maze_gen import row_1
 def generate_launch_description():
     '''Launches an epuck into a maze'''
     # Get the world path
-    world = os.path.join(get_package_share_directory('my_simulation'), 'worlds', 'maze_gen.world')
-
+    world = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'worlds', 'maze_gen.world')
+    
     # Modity the maze
     row_4(world)
     row_3(world)
@@ -31,7 +31,7 @@ def generate_launch_description():
     urdf = os.path.join(get_package_share_directory('my_simulation'), 'models', 'urdf', 'bocbot_gen.urdf')
     xml = open(urdf, 'r').read()
     xml = xml.replace('"', '\\"')
-    random_x = random.uniform(-0.65, 0.65)
+    random_x = random.uniform(-0.6, 0.6)
     spwan_args = f'{{name: \"bocbot\", xml: \"{xml}\", initial_pose: {{position: {{x: {random_x}, y: 1.25, z: 0}}}}}}'
     
     return LaunchDescription([

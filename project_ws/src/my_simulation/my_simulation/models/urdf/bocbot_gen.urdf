@@ -22,22 +22,22 @@
   </gazebo>
 
   <gazebo reference="left_wheel">
-    <mu1>0.1</mu1>
-    <mu2>0.1</mu2>
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>
     <kp>500000.0</kp>
     <kd>10.0</kd>
     <minDepth>0.001</minDepth>
-    <maxVel>0.1</maxVel>
+    <maxVel>0.5</maxVel>
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
   <gazebo reference="right_wheel">
-    <mu1>0.1</mu1>
-    <mu2>0.1</mu2>
+    <mu1>0.5</mu1>
+    <mu2>0.5</mu2>
     <kp>500000.0</kp>
     <kd>10.0</kd>
     <minDepth>0.001</minDepth>
-    <maxVel>0.1</maxVel>
+    <maxVel>0.5</maxVel>
     <fdir1>1 0 0</fdir1>
   </gazebo>
 

@@ -139,7 +139,7 @@
         <collision name="Wall_6_Collision">
           <geometry>
             <box>
-              <size>0.18735 0.1 0.1</size>
+              <size>0.23872099999999996 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -161,7 +161,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.18735 0.1 0.1</size>
+              <size>0.23872099999999996 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -175,7 +175,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.049534999999999996 1.05 0 0 -0 0</pose>
+        <pose>0.10007150000000001 1.05 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -184,7 +184,7 @@
         <collision name="Wall_5_Collision">
           <geometry>
             <box>
-              <size>0.18735 0.1 0.1</size>
+              <size>0.23872099999999996 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -206,7 +206,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.18735 0.1 0.1</size>
+              <size>0.23872099999999996 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -220,7 +220,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.37207 1.05 0 0 -0 0</pose>
+        <pose>0.5806395 1.05 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -274,7 +274,7 @@
         <collision name="Wall_11_Collision">
           <geometry>
             <box>
-              <size>0.36310449999999994 0.1 0.1</size>
+              <size>0.2932659999999999 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -296,7 +296,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.36310449999999994 0.1 0.1</size>
+              <size>0.2932659999999999 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -310,7 +310,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.29385074999999994 0.25 0 0 -0 0</pose>
+        <pose>-0.282211 0.25 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -319,7 +319,7 @@
         <collision name="Wall_10_Collision">
           <geometry>
             <box>
-              <size>0.4595 0.1 0.1</size>
+              <size>0.415192 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -341,7 +341,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.4595 0.1 0.1</size>
+              <size>0.415192 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -355,7 +355,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.29385074999999994 0.5297499999999999 0 0 -0 1.5708</pose>
+        <pose>-0.282211 0.5075959999999999 0 0 -0 1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -364,7 +364,7 @@
         <collision name="Wall_9_Collision">
           <geometry>
             <box>
-              <size>0.36310449999999994 0.1 0.1</size>
+              <size>0.2932659999999999 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -386,7 +386,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.36310449999999994 0.1 0.1</size>
+              <size>0.2932659999999999 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -400,7 +400,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.29385074999999994 0.25 0 0 -0 0</pose>
+        <pose>0.282211 0.25 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -409,7 +409,7 @@
         <collision name="Wall_8_Collision">
           <geometry>
             <box>
-              <size>0.4595 0.1 0.1</size>
+              <size>0.415192 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -431,7 +431,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.4595 0.1 0.1</size>
+              <size>0.415192 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -445,7 +445,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.29385074999999994 0.5297499999999999 0 0 -0 -1.5708</pose>
+        <pose>0.282211 0.5075959999999999 0 0 -0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -454,7 +454,7 @@
         <collision name="Wall_15_Collision">
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -476,7 +476,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <material>
@@ -490,7 +490,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.46210087499999997 -0.35 0 0 -0 -1.5708</pose>
+        <pose>-0.4624964999999999 -0.35 0 0 -0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -499,7 +499,7 @@
         <collision name="Wall_14_Collision">
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -521,7 +521,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <material>
@@ -535,7 +535,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.154033625 -0.35 0 0 -0 -1.5708</pose>
+        <pose>-0.15416549999999998 -0.35 0 0 -0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -544,7 +544,7 @@
         <collision name="Wall_13_Collision">
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -566,7 +566,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <material>
@@ -580,7 +580,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.154033625 -0.35 0 0 -0 -1.5708</pose>
+        <pose>0.15416549999999998 -0.35 0 0 -0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -634,7 +634,7 @@
         <collision name="Wall_12_Collision">
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -656,7 +656,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.586966 0.14033625 0.1</size>
+              <size>0.562233 0.14165499999999998 0.1</size>
             </box>
           </geometry>
           <material>
@@ -670,7 +670,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.46210087499999997 -0.35 0 0 -0 -1.5708</pose>
+        <pose>0.4624964999999999 -0.35 0 0 -0 -1.5708</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -679,7 +679,7 @@
         <collision name="Wall_18_Collision">
           <geometry>
             <box>
-              <size>0.3405933333333333 0.1 0.1</size>
+              <size>0.2769973333333333 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -701,7 +701,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.3405933333333333 0.1 0.1</size>
+              <size>0.2769973333333333 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -715,7 +715,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.5297033333333333 -1 0 0 -0 0</pose>
+        <pose>-0.5615013333333333 -1 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -724,7 +724,7 @@
         <collision name="Wall_17_Collision">
           <geometry>
             <box>
-              <size>0.3405933333333333 0.1 0.1</size>
+              <size>0.2769973333333333 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -746,7 +746,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.3405933333333333 0.1 0.1</size>
+              <size>0.2769973333333333 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -769,7 +769,7 @@
         <collision name="Wall_16_Collision">
           <geometry>
             <box>
-              <size>0.3405933333333333 0.1 0.1</size>
+              <size>0.2769973333333333 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -791,7 +791,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.3405933333333333 0.1 0.1</size>
+              <size>0.2769973333333333 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -805,7 +805,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>0.5297033333333333 -1 0 0 -0 0</pose>
+        <pose>0.5615013333333333 -1 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
@@ -859,7 +859,7 @@
         <collision name="Wall_7_Collision">
           <geometry>
             <box>
-              <size>0.18735 0.1 0.1</size>
+              <size>0.23872099999999996 0.1 0.1</size>
             </box>
           </geometry>
           <pose>0 0 0.05 0 -0 0</pose>
@@ -881,7 +881,7 @@
           <pose>0 0 0.05 0 -0 0</pose>
           <geometry>
             <box>
-              <size>0.18735 0.1 0.1</size>
+              <size>0.23872099999999996 0.1 0.1</size>
             </box>
           </geometry>
           <material>
@@ -895,7 +895,7 @@
             <layer>0</layer>
           </meta>
         </visual>
-        <pose>-0.421605 1.05 0 0 -0 0</pose>
+        <pose>-0.3596444999999999 1.05 0 0 -0 0</pose>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>

@@ -60,7 +60,7 @@ def generate_fixed_triangular_prism():
     </link>
   </model>
 </sdf>
-                        '''
+'''
     
     # Get the mesh path
     mesh_path = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'meshes', 'triangular_prism', 'triangular_prism.stl')

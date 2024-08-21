@@ -6,7 +6,7 @@ def row_4(world_file_path):
     '''Changes the fourth row of the maze'''
     # Set parameters
     link_names = ["Wall_17", "Wall_18", "Wall_16"]
-    min_gap = 0.14
+    min_gap = 0.2
     max_gap = 0.35
 
     # Parse the XML file
@@ -43,7 +43,7 @@ def row_3(world_file_path):
     '''Changes the third row of the maze'''
     # Set parameters
     link_names = ["Wall_12", "Wall_13", "Wall_14", "Wall_15"]
-    min_gap = 0.14
+    min_gap = 0.16
     max_gap = 0.20
     min_length = 0.2
     max_length = 0.6
@@ -89,7 +89,7 @@ def row_2(world_file_path):
     # Set parameters
     link_names_ver = ["Wall_9", "Wall_11"]
     link_names_hor = ["Wall_8", "Wall_10"]
-    min_gap = 0.14
+    min_gap = 0.16
     max_gap = 0.3
     min_length = 0.2
     max_length = 0.5
@@ -156,9 +156,9 @@ def row_1(world_file_path):
     # Set parameters
     link_names = ["Wall_5", "Wall_6", "Wall_7"]
     min_gap_1 = 0.2
-    max_gap_1 = 0.25
-    min_gap_2 = 0.14
-    max_gap_2 = 0.2
+    max_gap_1 = 0.26
+    min_gap_2 = 0.16
+    max_gap_2 = 0.23
 
     # Parse the XML file
     tree = ET.parse(world_file_path)
@@ -168,7 +168,7 @@ def row_1(world_file_path):
     r_1 = round(random.uniform(min_gap_1, max_gap_1), 6)
     r_2 = round(random.uniform(min_gap_2, max_gap_2), 6)
     # Calculate the wall width
-    a = (1.4 - 2 * (r_1 + r_2)) / 3
+    a = (1.4 - 2 * r_2 - r_1) / 3
 
     # Get the x coordinate of position and the width of Wall_2 (north wall)
     link = root.find(".//link[@name='Wall_2']")
@@ -192,11 +192,11 @@ def row_1(world_file_path):
         pose_elem = link.find("pose")
         pose = pose_elem.text.split()
         if link_name == "Wall_5":
-            pose[0] = str(p_2 - s_2/2 - a/2 - r_1)
+            pose[0] = str(p_2 - s_2/2 - a/2)
         elif link_name == "Wall_6":
-            pose[0] = str(p_2 - s_2/2 - 3 * a/2 - 2 * r_1)
+            pose[0] = str(p_2 - s_2/2 - 3 * a/2 - r_1)
         elif link_name == "Wall_7":
-            pose[0] = str(p_2 - s_2/2 - 5 * a/2 - 2 * r_1 - r_2)
+            pose[0] = str(p_2 - s_2/2 - 5 * a/2 - r_1 - r_2)
         pose_elem.text = " ".join(pose)
 
     # Save the modified XML

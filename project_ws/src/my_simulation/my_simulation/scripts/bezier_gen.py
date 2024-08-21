@@ -60,7 +60,7 @@ def generate_bezier(num_files=1):
     </link>
   </model>
 </sdf>
-                        '''
+'''
 
     # Create the directory if it doesn't exist
     output_dir = os.path.join(os.path.abspath('src'), 'my_simulation', 'my_simulation', 'models', 'bezier')
