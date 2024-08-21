@@ -21,7 +21,7 @@ Structure:
     - ```epuck_teleop_key.py```: used to move an Epuck when you have only one Epuck,
     - ```epuck_teleop_key_two.py```: used to move an Epuck when you have two Epucks,
     - ```epuck_controller.py```: used to move an Epuck in ```room.world``` from a random location to a pre-set location,
-    - ```epuck_maze_controller.py```: used to navigate an Epuck trough a maze (```maze.world``` or ```maze_gen.world```) from the spawn location to a pre-set location,
+    - ```epuck_maze_controller.py```: used to navigate an Epuck trough a maze (```maze_gen.world```) from the spawn location to a pre-set location,
 - models forlder: ```.sdf``` and ```.urdf``` files for the objects and the Epuck,
 - meshes folder: meshes used to create the objects and the Epuck.
 

@@ -56,7 +56,7 @@ class EPuckMazeController(Node):
         '''Converts grid coordinates to world coordinates.'''
         world_path = []
         for point in path:
-            world_x = point[0] * self.grid_resolution - 0.8
+            world_x = point[0] * self.grid_resolution - 0.8 - 0.05
             world_y = point[1] * self.grid_resolution - 1.49 - 0.05
             world_path.append((world_x, world_y))
         return world_path
